@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wheatstead · 排行榜管理</title><link rel="stylesheet" href="/admin/assets/dashboard.css"><script defer src="/admin/assets/dashboard.js"></script></head>
+<body><main>
+<header><div><p class="eyebrow">WHEATSTEAD / 管理后台</p><h1>排行榜管理</h1><p>管理排行榜账号、通关成绩与设备重绑。</p></div><div class="actions"><button id="refresh">刷新</button><button id="multiplayer" class="secondary">多人世界</button><button id="logout" class="secondary">退出</button></div></header>
+<p id="status" role="status">正在读取…</p><p id="code" class="notice" hidden></p>
+<div id="overview" class="cards"></div>
+<div class="toolbar"><label>搜索昵称<input id="search" type="search" placeholder="筛选下方账号与成绩"></label><span>列表各显示最近 500 条；管理时间为北京时间。</span></div>
+<nav><button data-view="accounts" class="selected">账号</button><button data-view="scores">通关成绩</button><button data-view="audit">操作记录</button></nav>
+<section id="accounts" class="panel"><h2>排行榜账号</h2><div class="table-wrap"><table><thead><tr><th>昵称</th><th>状态</th><th>成绩数</th><th>注册时间</th><th>操作</th></tr></thead><tbody id="account-rows"></tbody></table></div></section>
+<section id="scores" class="panel" hidden><h2>通关成绩</h2><p>按最近提交时间展示；公开榜按通关天数、实际时长排序。</p><div class="table-wrap"><table><thead><tr><th>昵称</th><th>游戏天数</th><th>实际时长</th><th>类别</th><th>版本</th><th>提交时间</th><th>操作</th></tr></thead><tbody id="score-rows"></tbody></table></div></section>
+<section id="audit" class="panel" hidden><h2>最近 100 条管理操作</h2><div class="table-wrap"><table><thead><tr><th>操作</th><th>对象编号</th><th>时间</th></tr></thead><tbody id="audit-rows"></tbody></table></div></section>
+</main></body></html>

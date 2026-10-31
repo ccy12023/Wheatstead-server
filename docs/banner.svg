@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Wheatstead Server">
+  <rect width="1200" height="320" fill="#12161f"/>
+  <g stroke="#e0b25a" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M120 250 V120"/>
+    <path d="M120 150 q-26 -18 -26 -44 q26 6 26 32"/>
+    <path d="M120 150 q26 -18 26 -44 q-26 6 -26 32"/>
+    <path d="M120 196 q-26 -18 -26 -44 q26 6 26 32"/>
+    <path d="M120 196 q26 -18 26 -44 q-26 6 -26 32"/>
+  </g>
+  <text x="190" y="150" fill="#f2f4f8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="56" font-weight="600">Wheatstead Server</text>
+  <text x="193" y="205" fill="#9aa4b2" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26">Self-hosted Steam multiplayer server</text>
+  <text x="193" y="252" fill="#e0b25a" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20">Steam ticket auth · official worlds · plots · houses · leaderboards</text>
+</svg>

@@ -1,0 +1,17 @@
+name: build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: dotnet build src/Wheatstead.PlaytestServer.csproj -c Release
+      - run: dotnet publish src/Wheatstead.PlaytestServer.csproj -c Release -r linux-x64 --self-contained true -o out

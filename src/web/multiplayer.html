@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wheatstead · 官方多人世界</title><link rel="stylesheet" href="/admin/assets/dashboard.css"></head>
+<body class="multiplayer-admin"><main>
+<header><div><p class="eyebrow">WHEATSTEAD / 管理后台</p><h1>官方多人世界</h1>
+<p>世界、地块分配、节点心跳与操作记录。官方世界固定不入通关速度榜。</p></div>
+<div class="actions"><button id="refresh">刷新</button><button id="leaderboard" class="secondary">排行榜后台</button><button id="logout" class="secondary">退出</button></div></header>
+<div id="notice" class="notice">正在读取…</div>
+<section class="panel"><h2>服务器资源</h2><p>显示后台所在机器的数据，每 15 秒刷新；磁盘为多人数据库所在文件系统。CPU 使用率按两次采样的间隔计算。</p><div id="metrics" class="cards metrics"></div><p id="metrics-time"></p></section>
+<section id="worlds" class="panel"><h2>世界</h2><p class="table-scroll-hint">手机上可左右滑动查看完整表格。</p><div id="world-list"></div></section>
+<section class="panel"><h2>节点心跳</h2><p>旧版节点上报人数可能包含模拟主机；离线节点显示的是最后一次上报的值。</p><div class="table-wrap"><table><thead><tr><th>节点</th><th>地区</th><th>版本</th><th>上报人数</th><th>最后心跳</th><th>状态</th></tr></thead><tbody id="node-rows"></tbody></table></div></section>
+<section class="panel"><h2>已认证玩家</h2><p>根据新版本世界节点的心跳快照显示；超过 90 秒未更新时状态为未知。</p><div id="player-snapshots"></div></section>
+<section class="panel"><h2>最近连接记录</h2><p>新版本节点上报的连接与断开事件，最多显示最近 100 条。节点异常退出或发送队列丢失时记录可能不完整。</p><div class="table-wrap"><table><thead><tr><th>世界</th><th>节点</th><th>SteamID</th><th>事件</th><th>事件时间</th><th>接收时间</th></tr></thead><tbody id="connection-rows"></tbody></table></div></section>
+<section class="panel"><h2>最近操作</h2><div class="table-wrap"><table><thead><tr><th>操作</th><th>对象</th><th>时间</th></tr></thead><tbody id="audit-rows"></tbody></table></div></section>
+</main>
+<script src="/admin/assets/multiplayer.js"></script>
+</body></html>

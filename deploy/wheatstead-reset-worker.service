@@ -1,0 +1,24 @@
+[Unit]
+Description=Wheatstead world reset worker
+After=network.target wheatstead-server.service
+Requires=wheatstead-server.service
+
+[Service]
+Type=simple
+User=wheatstead
+Group=wheatstead
+WorkingDirectory=/opt/wheatstead-server
+EnvironmentFile=/etc/wheatstead/server.env
+Environment=WHEATSTEAD_CONTROL_URL=http://127.0.0.1:8081
+ExecStart=/usr/bin/python3 /opt/wheatstead-server/reset/worker.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+StateDirectory=wheatstead
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

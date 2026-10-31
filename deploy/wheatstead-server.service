@@ -1,0 +1,23 @@
+[Unit]
+Description=Wheatstead multiplayer server
+After=network.target
+
+[Service]
+Type=simple
+User=wheatstead
+Group=wheatstead
+WorkingDirectory=/opt/wheatstead-server
+EnvironmentFile=/etc/wheatstead/server.env
+ExecStart=/opt/wheatstead-server/Wheatstead.PlaytestServer
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+StateDirectory=wheatstead
+StateDirectoryMode=0700
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
