@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/.NET-8.0-512bd4" alt=".NET 8">
   <img src="https://img.shields.io/badge/license-MIT-3da639" alt="MIT">
   <img src="https://img.shields.io/badge/platform-linux--x64-lightgrey" alt="linux-x64">
+  <a href="https://store.steampowered.com/app/5485050/"><img src="https://img.shields.io/badge/Steam-5485050-1b2838?logo=steam" alt="Steam"></a>
 </p>
 
 # Wheatstead Server
@@ -14,6 +15,8 @@
 自托管的 Steam 多人服务器：玩家用 Steam 账号登录，在自己的世界里选地、建房、串门。
 
 > 游戏本体不开源，**这个仓库只包含服务器**。世界进程是游戏构建（`WheatsteadWorld --headless -- --server`），需要你自己的游戏客户端。
+>
+> 游戏页面：[正式版](https://store.steampowered.com/app/5485050/) ｜ [Demo](https://store.steampowered.com/app/5489270/)
 
 ## 能做什么
 
